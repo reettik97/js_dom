@@ -13,7 +13,7 @@ var quotes;
      let string = "";
      var random_number= Math.floor(Math.random() * quotes.length);
      string += quotes[random_number].quoteAuthor;
-     string +="-" + quotes[random_number].quoteText;
+     string +="  - " + quotes[random_number].quoteText;
      change_quotes.textContent = string;
      return;
  }
