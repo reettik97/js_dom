@@ -50,27 +50,27 @@
   <div class="demo-query-all">Access me by query all (2)</div>
   <script>
     // your code goes here
-    let demo_by_id = document.querySelector('#demo');
-    demo_by_id.style.border = "2px solid purple";
+    let demoById = document.querySelector('#demo');
+        demoById.style.border = "2px solid purple";
 
-    let demo_by_class = document.querySelectorAll('.demo');
-    for (let i = 0; i < demo_by_class.length; i++) {
-      demo_by_class[i].style.border = `1px solid orange`;
+    let demoByClasses = document.querySelectorAll('.demo');
+    for (let i = 0; i < demoByClasses.length; i++) {
+      demoByClasses[i].style.border = `1px solid orange`;
     }
 
-    let article_tag = document.querySelectorAll('article');
-    for (let i = 0; i < article_tag.length; i++) {
-      article_tag[i].style.border = `1px solid blue`;
+    let articleTag = document.querySelectorAll('article');
+    for (let i = 0; i < articleTag.length; i++) {
+      articleTag[i].style.border = `1px solid blue`;
     }
 
-    let id_demo_query = document.querySelectorAll('#demo-query');
-    for (let i = 0; i < id_demo_query.length; i++) {
-      id_demo_query[i].style.border = `1px solid grey`;
+    let idDemoQuery = document.querySelectorAll('#demo-query');
+    for (let i = 0; i < idDemoQuery.length; i++) {
+      idDemoQuery[i].style.border = `1px solid grey`;
     }
 
-    let class_demo_query_all = document.querySelectorAll('.demo-query-all');
-    for (let i = 0; i < class_demo_query_all.length; i++) {
-      class_demo_query_all[i].style.border = `1px solid green`;
+    let classDemoQueryAll = document.querySelectorAll('.demo-query-all');
+    for (let i = 0; i < classDemoQueryAll.length; i++) {
+      classDemoQueryAll[i].style.border = `1px solid green`;
     }
   </script>
 </body>
