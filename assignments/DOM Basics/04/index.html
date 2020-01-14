@@ -6,11 +6,33 @@
   </head>
   <body>
     <h1>About Me</h1>
-
+  
     <ul>
       <li>Nickname: <span id="nickname"></span></li>
       <li>Favorites: <span id="favorites"></span></li>
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
+
+    <script>
+      document.body.style.fontFamily = "Arial, sans-serif";
+      document.querySelector("#nickname").innerHTML = 'Reettik Goswami';
+      document.querySelector("#favorites").innerHTML = 'Fish'; 
+      document.querySelector("#hometown").textContent = 'Asansol';
+
+     let list = document.querySelectorAll('li');
+     
+     list.forEach(list =>{
+       list.className = "listitem";
+       list.style.color = 'red';
+     })
+
+     let image = document.createElement('img');
+    image.src = '../03/assets/childnodes.png';
+    image.alt = "table";
+    document.body.append(image);
+
+
+    
+    </script>
   </body>
 </html>

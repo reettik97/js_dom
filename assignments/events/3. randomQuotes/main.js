@@ -1,7 +1,22 @@
 var quotes;
 
 // Write your code here
+ var change_quotes = document.querySelector('body');
 
+ window.addEventListener('keydown' , function(e){
+     if(e.keyCode == '32'){
+         random_quotes();
+     }
+ })
+ 
+ function random_quotes(){
+     let string = "";
+     var random_number= Math.floor(Math.random() * quotes.length);
+     string += quotes[random_number].quoteAuthor;
+     string +="  - " + quotes[random_number].quoteText;
+     change_quotes.textContent = string;
+     return;
+ }
 
 
 quotes = [

@@ -1,52 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Accessing Elements in the DOM</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-      html {
-        font-family: sans-serif;
-        color: #333;
-      }
-      body {
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 0 15px;
-      }
-      div,
-      article {
-        padding: 10px;
-        margin: 5px;
-        border: 1px solid #dedede;
-      }
-    </style>
-  </head>
+  <title>Accessing Elements in the DOM</title>
 
-  <body>
-    <h1>Accessing Elements in the DOM</h1>
+  <style>
+    html {
+      font-family: sans-serif;
+      color: #333;
+    }
 
-    <h2>ID (#demo)</h2>
-    <div id="demo">Access me by ID</div>
+    body {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
 
-    <h2>Class (.demo)</h2>
-    <div class="demo">Access me by class (1)</div>
-    <div class="demo">Access me by class (2)</div>
+    div,
+    article {
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #dedede;
+    }
+  </style>
+</head>
 
-    <h2>Tag (article)</h2>
-    <article>Access me by tag (1)</article>
-    <article>Access me by tag (2)</article>
+<body>
+  <h1>Accessing Elements in the DOM</h1>
 
-    <h2>Query Selector</h2>
-    <div id="demo-query">Access me by query</div>
+  <h2>ID (#demo)</h2>
+  <div id="demo">Access me by ID</div>
 
-    <h2>Query Selector All</h2>
-    <div class="demo-query-all">Access me by query all (1)</div>
-    <div class="demo-query-all">Access me by query all (2)</div>
-    <script>
-      // your code goes here
-    </script>
-  </body>
+  <h2>Class (.demo)</h2>
+  <div class="demo">Access me by class (1)</div>
+  <div class="demo">Access me by class (2)</div>
+
+  <h2>Tag (article)</h2>
+  <article>Access me by tag (1)</article>
+  <article>Access me by tag (2)</article>
+
+  <h2>Query Selector</h2>
+  <div id="demo-query">Access me by query</div>
+
+  <h2>Query Selector All</h2>
+  <div class="demo-query-all">Access me by query all (1)</div>
+  <div class="demo-query-all">Access me by query all (2)</div>
+  <script>
+    // your code goes here
+    let demoById = document.querySelector('#demo');
+        demoById.style.border = "2px solid purple";
+
+    let demoByClasses = document.querySelectorAll('.demo');
+    for (let i = 0; i < demoByClasses.length; i++) {
+      demoByClasses[i].style.border = `1px solid orange`;
+    }
+
+    let articleTag = document.querySelectorAll('article');
+    for (let i = 0; i < articleTag.length; i++) {
+      articleTag[i].style.border = `1px solid blue`;
+    }
+
+    let idDemoQuery = document.querySelectorAll('#demo-query');
+    for (let i = 0; i < idDemoQuery.length; i++) {
+      idDemoQuery[i].style.border = `1px solid grey`;
+    }
+
+    let classDemoQueryAll = document.querySelectorAll('.demo-query-all');
+    for (let i = 0; i < classDemoQueryAll.length; i++) {
+      classDemoQueryAll[i].style.border = `1px solid green`;
+    }
+  </script>
+</body>
+
 </html>
